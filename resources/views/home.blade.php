@@ -9,7 +9,7 @@
     </head>
     <body>
         <div style="border: 3px solid black;">
-            <h2>Register</h2>
+            <h2>Register Your Account!</h2>
             <form action="/register" method="post">
                 <input type="text" placeholder="name">
                 <input type="text" placeholder="email">
