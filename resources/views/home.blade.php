@@ -9,7 +9,7 @@
     <body>
         <div style="border: 3px solid black;">
             <h2>Register Your Account!</h2>
-            <form action="/register" method="post">
+            <form action="/register" method="POST">
                 @csrf
                 <input name="name" type="text" placeholder="name">
                 <input name="email" type="text" placeholder="email">
