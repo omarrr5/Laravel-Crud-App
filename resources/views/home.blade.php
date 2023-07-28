@@ -31,11 +31,13 @@
                 <div style="background: grey; color: #e2e8f0; padding: 10px; margin: 10px;">
                     <h3>{{$post['title']}} by {{$post->User->name}}</h3>
                     {{$post['body']}}
-                    <p><a href="/edit-post/{{$post->id}}">Edit</a></p>
+                    <p><a href="/edit-post/{{$post->id}}">
+                             <button>Edit Post</button>
+                        </a></p>
                     <form action="/delete-post/{{$post->id}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button>Delete</button>
+                        <button>Delete Post</button>
                     </form>
                 </div>
             @endforeach
