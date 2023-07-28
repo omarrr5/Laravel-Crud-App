@@ -17,7 +17,10 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function (): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application {
-    $posts = Post::all();
+    $posts = [];
+    if (auth()->check()){
+        $posts = auth()->user()->usersCoolPosts()->latest()->get();
+    }
     return view('home',['posts' => $posts ]);
 });
 
